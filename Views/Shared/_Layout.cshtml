@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Greetings From Space</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+
+    <!-- header start -->
+
+    <header>
+
+        <!-- nav start -->
+
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-transparent p-4">
+                <h5 class="text-white h4">Greetings From Space</h5>
+                <a class="nav-link text-white" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="nav-link text-white" asp-controller="Home" asp-action="About">About</a>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-transparent">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- nav end -->
+
+    </header>
+
+    <!-- header end -->
+
+    <!-- main start -->
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- main end -->
+
+    <!-- footer start -->
+
+    <footer class="footer text-center text-white">
+            <p class="fw-bolder">&copy; 2021 Johan Nilsson</p>
+    </footer>
+
+    <!-- footer end -->
+
+    <!-- scripts -->
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

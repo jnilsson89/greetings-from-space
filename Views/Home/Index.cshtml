@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- container start -->
+
+<div class="container text-white">
+
+    <!-- centered text start -->
+
+    <div class="text-center text-white">
+
+        <!-- title and date start -->
+
+        <h1>Astronomy Picture of the Day from NASA</h1>
+        <h2>@ViewBag.Date</h2>
+
+        <!-- title and date end -->
+
+        <!-- image and copyright start -->
+
+        <img src="@Model.Url" class="border border-3 img-fluid" />
+        <p>&copy; @ViewBag.Copyright</p>
+
+        <!-- image and copyright end -->
+
+    </div>
+
+    <!-- centered text end -->
+
+    <!-- explanation start -->
+
+    <div class="col-md-8 offset-md-2">
+        <p>@ViewBag.Explanation</p>
+    </div>
+
+    <!-- explanation end -->
+
+</div>
+
+<!-- container end -->
